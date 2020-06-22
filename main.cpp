@@ -5,7 +5,8 @@ using namespace std::chrono;
 #define ll long long
 #define f first
 #define s second
-#define algorithm giftWrapping
+#define algorithm grahamScan
+#define randomPoints randomSquare
 void calculate(int x,int y){
   vector<vector<point>> vals;
   for (int i = 0; i < 10; i++) {
@@ -16,22 +17,27 @@ void calculate(int x,int y){
       vals.push_back(randomPoints(x));
     }
   }
+  if (y) {
+    cout<<x<<','<<y<<':'<<endl;
+  }
+  else{
+    cout<<x<<':'<<endl;
+  }
   auto start=high_resolution_clock::now();
   for(auto i:vals){
-    //cout<<algorithm(i).size()<<endl;
-    algorithm(i);
+    cout<<algorithm(i).size()<<endl;
+    //algorithm(i);
   }
   auto stop=high_resolution_clock::now();
-  cout<<"time: "<<duration_cast<microseconds>(stop - start).count()<<endl;
+  cout<<"time: "<<duration_cast<microseconds>(stop - start).count()/10<<endl;
 }
 int main()
 {
   ios_base::sync_with_stdio(false);
   cin.tie(nullptr);
-  srand(time(NULL));
+  srand((unsigned int)time(NULL));
   cout<<setprecision(20);
   for (int i = 10; i <= 100; i+=10) {
-    cout<<i<<":"<<endl;
     calculate(10000,i);
   }
   return 0;

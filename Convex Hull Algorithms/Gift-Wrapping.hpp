@@ -3,7 +3,7 @@ list<point> giftWrapping(vector<point> input){
   point newPoint=input[0];
   list<point> rtn;
   for (point i:input) {
-    if (i.x<newPoint.x) {
+    if (i.x<newPoint.x||(i.x==newPoint.x&&i.y<newPoint.y)) {
       newPoint=i;
     }
   }
