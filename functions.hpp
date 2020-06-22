@@ -27,6 +27,10 @@ bool crossProduct(point a,point b,point c){//finds clockwise/counterclockwise of
 }
 //My brain hurts, I hope the points being collinear doesn't fuck something up
 //Is it larger or  smaller than 0? Does it even matter?
+ll lineDistance(line p,point q){//running out of the alphabet reeeeeeeeeeeeeeee
+  return abs((q.y-p.a.y)*(p.b.x-p.a.x)-(p.b.y-p.a.y)*(q.x-p.a.x));
+}
+//not the acutal distance buut porportional
 ll llrand(){
   return rand()%2?(rand()%LIMIT):(-(rand()%LIMIT));
 }//I know this can't get to LIMIT, but I don't care
