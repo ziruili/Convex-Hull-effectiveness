@@ -5,7 +5,7 @@ using namespace std::chrono;
 #define ll long long
 #define f first
 #define s second
-#define algorithm grahamScan
+#define algorithm monotoneChain
 #define randomPoints randomSquare
 void calculate(int x,int y){
   vector<vector<point>> vals;
