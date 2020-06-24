@@ -1,7 +1,7 @@
 #include "../functions.hpp"
-list<point> giftWrapping(vector<point> input){
+vector<point> giftWrapping(vector<point> input){
   point newPoint=input[0];
-  list<point> rtn;
+  vector<point> rtn;
   for (point i:input) {
     if (i.x<newPoint.x||(i.x==newPoint.x&&i.y<newPoint.y)) {
       newPoint=i;

@@ -1,7 +1,7 @@
 #include "../functions.hpp"
-list<point> grahamScan(vector<point> input){
+vector<point> grahamScan(vector<point> input){
   auto firstPoint=input.begin();
-  list<point> rtn;
+  vector<point> rtn;
   for (auto i=input.begin();i!=input.end();i++) {
     if (i->x<firstPoint->x||(i->x==firstPoint->x&&i->y<firstPoint->y)) {
       firstPoint=i;
